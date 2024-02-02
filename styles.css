@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  width: 45%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(30, 54%, 90%);
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+main {
+  border-radius: 20px;
+  margin-top: 50px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  color: hsl(14, 45%, 36%);
+}
+
+h3 {
+  color: hsl(332, 51%, 32%);
+}
+
+span {
+  font-weight: 600;
+  color: hsl(24, 5%, 18%);
+}
+
+section {
+  padding: 30px 30px;
+}
+
+p,
+ul,
+ol {
+  font-size: 14px;
+  padding-right: 50px;
+}
+
+ol li {
+  position: relative;
+  list-style-type: none;
+  counter-increment: my-counter;
+  margin-bottom: 8px;
+}
+
+ol li:before {
+  content: counter(my-counter);
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+  position: absolute;
+  left: -2.5em;
+}
+
+.prep-time {
+  border-radius: 15px;
+  background-color: hsl(330, 100%, 98%);
+}
+
+.prep-time > div {
+  padding: 10px 10px;
+}
+
+.prep-time h3 {
+  margin-left: 10px;
+}
+
+.prep-time ul > li {
+  padding: 5px;
+}
+
+section > div {
+  margin-top: 20px;
+}
+
+hr {
+  border: solid 0.3px hsl(19, 11%, 35%);
+  opacity: 0.3;
+}
+
+.ingredients > ul > li::marker {
+  color: hsl(14, 45%, 36%);
+  margin-right: 2em;
+}
+
+.ingredients > ul > li {
+  margin-left: -1.7em;
+  padding: 5px;
+}
+
+table tr {
+  border-bottom: solid 1px hsl(19, 11%, 35%);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+
+table {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+    margin: -20px 0 0 0;
+  }
+  img {
+    border-radius: 0;
+    width: 100%;
+  }
+  main {
+    margin-top: 10px;
+  }
+  p,
+  ul,
+  ol {
+    padding-right: 10px;
+  }
+
+  section > div {
+    margin-top: 5px;
+  }
+
+  .ingredients > ul > li::marker {
+    margin-right: 0.5em;
+  }
+
+  .ingredients > ul > li {
+    margin-left: -1em;
+    padding: 3px;
+  }
+}
