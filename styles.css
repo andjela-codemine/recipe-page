@@ -4,11 +4,11 @@
 * {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
+  color: hsla(0, 0%, 1%, 0.585);
 }
 
 body {
-  width: 45%;
-  height: 100vh;
+  width: 50%;
   margin: 0 auto;
   background-color: hsl(30, 54%, 90%);
 }
@@ -20,13 +20,18 @@ img {
 
 main {
   border-radius: 20px;
-  margin-top: 50px;
+  margin-top: 100px;
   background-color: hsl(0, 0%, 100%);
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: black;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: "Young Serif", sans-serif;
   font-weight: 400;
 }
@@ -45,17 +50,23 @@ span {
 }
 
 section {
-  padding: 30px 30px;
+  padding: 40px 40px;
+}
+
+.span-bold {
+  color: hsla(0, 0%, 0%, 0.622);
+  font-weight: bold;
 }
 
 p,
 ul,
 ol {
-  font-size: 14px;
+  font-size: 16px;
   padding-right: 50px;
 }
 
 ol li {
+  padding: 3px;
   position: relative;
   list-style-type: none;
   counter-increment: my-counter;
@@ -63,7 +74,7 @@ ol li {
 }
 
 ol li:before {
-  content: counter(my-counter);
+  content: counter(my-counter) ".";
   display: inline-block;
   width: 1em;
   margin-right: 0.5em;
@@ -76,6 +87,7 @@ ol li:before {
 .prep-time {
   border-radius: 15px;
   background-color: hsl(330, 100%, 98%);
+  margin: 35px 0;
 }
 
 .prep-time > div {
@@ -84,10 +96,13 @@ ol li:before {
 
 .prep-time h3 {
   margin-left: 10px;
+  font-weight: 600;
 }
 
 .prep-time ul > li {
   padding: 5px;
+  padding-left: 15px;
+  margin-left: -5px;
 }
 
 section > div {
@@ -97,41 +112,75 @@ section > div {
 hr {
   border: solid 0.3px hsl(19, 11%, 35%);
   opacity: 0.3;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .ingredients > ul > li::marker {
   color: hsl(14, 45%, 36%);
-  margin-right: 2em;
 }
 
 .ingredients > ul > li {
-  margin-left: -1.7em;
+  margin-left: -1.2rem;
   padding: 5px;
+  padding-left: 20px;
 }
 
-table tr {
-  border-bottom: solid 1px hsl(19, 11%, 35%);
+.table .row {
   display: flex;
-  justify-content: space-between;
-  padding: 5px 5px;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(48, 48, 48, 0.162);
 }
 
-table {
-  width: 100%;
+.row.no-border {
+  border-bottom: none;
+}
+
+.row span {
+  width: 50%;
+  padding-left: 3rem;
+}
+
+.row .row-title {
+  color: hsl(30, 10%, 34%);
+  font-weight: 400;
+}
+
+.row .row-value {
+  color: hsl(14, 45%, 36%);
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {
   body {
+    margin: 0;
     width: 100%;
-    margin: -20px 0 0 0;
+    height: 100%;
   }
+
+  .img-big {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
   img {
     border-radius: 0;
-    width: 100%;
+    position: relative;
   }
+
   main {
-    margin-top: 10px;
+    border-radius: 0px;
+    width: 100%;
+    margin-bottom: 0;
   }
+
+  h1 {
+    margin-top: 100px;
+    font-size: 2rem;
+  }
+
   p,
   ul,
   ol {
@@ -142,12 +191,7 @@ table {
     margin-top: 5px;
   }
 
-  .ingredients > ul > li::marker {
-    margin-right: 0.5em;
-  }
-
-  .ingredients > ul > li {
-    margin-left: -1em;
-    padding: 3px;
+  ol li:before {
+    left: -2em;
   }
 }
