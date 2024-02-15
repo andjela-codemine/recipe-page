@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
-* {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #0a0a0a83;
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,6 +9,10 @@
 
 body {
   background-color: #f3e6d8;
+  color: #0a0a0a83;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .container {
@@ -21,6 +21,7 @@ body {
   background-color: #ffffff;
   border-radius: 1.25rem;
   padding: 4rem 0;
+  overflow: hidden;
 }
 
 header {
@@ -37,11 +38,15 @@ section {
   margin-bottom: 3rem;
 }
 
-.p-header {
+.header-description {
   margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  max-height: 10rem;
 }
 
-.header-h1 {
+.header-title {
   font-size: 2.5rem;
   color: #000000;
   margin-bottom: 3rem;
@@ -59,7 +64,7 @@ section {
 
 h2 {
   color: #854632;
-  font-size: 1.8rem;
+  font-size: 1.8125rem;
   font-family: 'Young Serif', sans-serif;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -76,7 +81,7 @@ span {
 }
 
 .instructions-item {
-  margin-left: 1.4rem;
+  margin-left: 1.5rem;
   padding: 0.5rem 0 0.5rem 1.25rem;
 }
 
@@ -85,7 +90,7 @@ span {
   font-weight: bold;
 }
 
-.preparation-h3 {
+.preparation-title {
   color: #7b284f;
   font-size: 1.2rem;
   padding-left: 0.9375rem;
@@ -93,12 +98,12 @@ span {
 }
 
 .preparation-item {
-  padding: 1rem 0.8rem 0;
+  padding: 1rem 1rem 0;
   color: #0a0a0a83;
-  margin-left: 2.2rem;
+  margin-left: 2.5rem;
 }
 
-.nutrition-paragraph {
+.nutrition-description {
   margin-bottom: 1rem;
 }
 
@@ -116,11 +121,11 @@ span {
 }
 
 .ingredients-item {
-  margin-left: 1.6rem;
-  padding: 0.5rem 1.3rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1.35rem;
 }
 
-.border-for-section {
+.section-with-border {
   border-bottom: 0.0625rem solid #23232343;
 }
 
@@ -154,11 +159,12 @@ span {
     margin: 1rem 0;
   }
 
-  .header-section {
-    margin: 0 10px;
+  .header-wrapper {
+    margin: 0 0.625rem;
   }
 
-  .header-h1 {
+  .header-title {
+    font-size: 2rem;
     line-height: 3rem;
     margin-bottom: 1rem;
   }
@@ -175,9 +181,5 @@ span {
     width: calc(100% + 5rem);
     margin: -1rem 0 1rem -3rem;
     border-radius: 0;
-  }
-
-  h1 {
-    font-size: 2rem;
   }
 }
