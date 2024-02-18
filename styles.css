@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
+:root {
+  --white: #ffffff;
+  --rose-white: #fff5fa;
+  --eggshell: #f3e6d8;
+  --light-grey: #e1dcd9;
+  --wenge-brown: #5f574e;
+  --dark-charcoal: #302d2c;
+  --nutmeg: #854632;
+  --raspberry: #7b284f;
+}
+
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -8,8 +19,8 @@
 }
 
 body {
-  background-color: #f3e6d8;
-  color: #0a0a0a83;
+  background-color: var(--eggshell);
+  color: var(--wenge-brown);
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -18,89 +29,89 @@ body {
 .container {
   max-width: 50%;
   margin: 8.125rem auto;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 1.25rem;
-  padding: 4rem 0;
+  padding: 2.5rem 0;
   overflow: hidden;
 }
 
 header {
-  margin: 0 4rem;
+  margin: 0 2.5rem;
 }
 
 section {
-  margin: 1rem 3rem;
+  margin: 1.75rem 2.5rem;
 }
 
 .header-image {
   width: 100%;
   border-radius: 0.625rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .header-description {
-  margin-bottom: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  max-height: 10rem;
+  line-height: 1.5;
 }
 
 .header-title {
   font-size: 2.5rem;
-  color: #000000;
-  margin-bottom: 3rem;
-  line-height: 0.075rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
   font-family: 'Young Serif', sans-serif;
   font-weight: 400;
 }
 
 .preparation-time {
-  background-color: #FFF5FA;
+  background-color: var(--rose-white);
   border-radius: 0.625rem;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+}
+
+.preparation-title {
+  color: var(--raspberry);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.preparation-item {
+  padding: 0.75rem 1.25rem 0;
+  color: var(--dark-charcoal);
+  margin-left: 1.25rem;
 }
 
 h2 {
-  color: #854632;
-  font-size: 1.8125rem;
+  color: var(--nutmeg);
+  font-size: 1.75rem;
   font-family: 'Young Serif', sans-serif;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.nutrition > h2 {
+  margin-bottom: 1.25rem;
 }
 
 span {
   font-weight: 600;
-  color: #302d2c;
+  color: var(--wenge-brown);
 }
 
 .span-bold {
-  color: #0a0a0ab2;
+  color: var(--dark-charcoal);
   font-weight: bold;
 }
 
 .instructions-item {
   margin-left: 1.5rem;
-  padding: 0.5rem 0 0.5rem 1.25rem;
+  padding: 0.25rem 0 0.25rem 1rem;
+  line-height: 1.5;
 }
 
 .instructions-item::marker {
-  color: #854632;
+  color: var(--nutmeg);
   font-weight: bold;
-}
-
-.preparation-title {
-  color: #7b284f;
-  font-size: 1.2rem;
-  padding-left: 0.9375rem;
-  font-weight: 600;
-}
-
-.preparation-item {
-  padding: 1rem 1rem 0;
-  color: #0a0a0a83;
-  margin-left: 2.5rem;
 }
 
 .nutrition-description {
@@ -108,31 +119,35 @@ span {
 }
 
 .preparation-item::marker {
-  color: #7b284f;
+  color: var(--raspberry);
 }
 
 .ingredients-list,
 .instructions-list {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .ingredients-item::marker {
-  color: #854632;
+  color: var(--nutmeg);
 }
 
 .ingredients-item {
-  margin-left: 1.5rem;
-  padding: 0.5rem 1.35rem;
+  margin-left: 1.35rem;
+  padding: 0.35rem 1.25rem;
 }
 
 .section-with-border {
-  border-bottom: 0.0625rem solid #23232343;
+  border-bottom: 0.0625rem solid var(--light-grey);
+}
+
+.nutrition {
+  margin-bottom: 0;
 }
 
 .table .row {
   display: flex;
-  padding: 0.625rem 0;
-  border-bottom: 0.0625rem solid #5959593a;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 0.0625rem solid var(--light-grey);
 }
 
 .row.no-border {
@@ -141,16 +156,16 @@ span {
 
 .row span {
   width: 50%;
-  padding-left: 2rem;
+  padding-left: 0.5rem;
 }
 
 .row .row-title {
-  color: #5f574ee6;
+  color: var(--wenge-brown);
   font-weight: 400;
 }
 
 .row .row-value {
-  color: #854532e6;
+  color: var(--nutmeg);
   font-weight: 600;
 }
 
@@ -165,8 +180,7 @@ span {
 
   .header-title {
     font-size: 2rem;
-    line-height: 3rem;
-    margin-bottom: 1rem;
+    line-height: 1;
   }
 
   .container {
@@ -179,7 +193,7 @@ span {
 
   .header-image {
     width: calc(100% + 5rem);
-    margin: -1rem 0 1rem -3rem;
+    margin: -1rem 0 1rem -3.125rem;
     border-radius: 0;
   }
 }
